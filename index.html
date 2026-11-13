@@ -4,77 +4,302 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fruit Fusion 3D | Roblox</title>
-  <!-- TODO: ゲームの紹介文に差し替える（120文字程度） -->
-  <meta name="description" content="フルーツを落として、同じフルーツどうしをくっつけて大きく育てる 3D パズル。Roblox で無料で遊べます。">
+  <meta name="description" content="同じフルーツをくっつけて大きく育てる 3D 物理パズル。最大 16 人のバトルロイヤルでコンボを決めて妨害を送り合い、最後の 1 人を目指そう。Roblox で無料で遊べます。">
 
   <!-- OGP（X などで共有したときのサムネイル）。og:image は絶対 URL で書く -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Fruit Fusion 3D">
   <meta property="og:title" content="Fruit Fusion 3D | Roblox">
-  <meta property="og:description" content="フルーツを落として、同じフルーツどうしをくっつけて大きく育てる 3D パズル。Roblox で無料で遊べます。">
+  <meta property="og:description" content="同じフルーツをくっつけて大きく育てる 3D 物理パズル。最大 16 人のバトルロイヤルで最後の 1 人を目指そう。Roblox で無料。">
   <meta property="og:url" content="https://kazumasaiwazaki.github.io/fruit-fusion-3d/">
   <meta property="og:image" content="https://kazumasaiwazaki.github.io/fruit-fusion-3d/assets/images/ogp.png">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="assets/images/icon.png">
+  <link rel="apple-touch-icon" href="assets/images/icon.png">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="hero">
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="nav-logo" href="#top"><img src="assets/images/icon.png" width="32" height="32" alt="">Fruit Fusion 3D</a>
+      <div class="nav-links">
+        <a href="#features">特徴</a>
+        <a href="#howto">遊び方</a>
+        <a href="#modes">モード</a>
+        <a href="#battle">バトル</a>
+        <a href="#collect">やりこみ</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="nav-play" href="https://www.roblox.com/games/120549661967902" target="_blank" rel="noopener">遊ぶ</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
     <div class="container hero-inner">
       <div class="hero-text">
         <p class="eyebrow">Roblox Game</p>
         <h1>Fruit Fusion 3D</h1>
-        <!-- TODO: キャッチコピー -->
-        <p class="lead">落として、くっつけて、もっと大きく。<br>3D で遊ぶフルーツ合体パズル。</p>
+        <p class="lead">落として、くっつけて、もっと大きく。<br>
+          <strong>物理マージパズル × バトルロイヤル。</strong></p>
+        <ul class="badges">
+          <li>無料で遊べる</li>
+          <li>最大 16 人で対戦</li>
+          <li>スマホ・PC・ゲームパッド</li>
+        </ul>
         <a class="btn-play" href="https://www.roblox.com/games/120549661967902" target="_blank" rel="noopener">Play on Roblox</a>
       </div>
-      <!-- TODO: assets/images/hero.png を置いたら div を img に差し替える -->
-      <div class="hero-visual placeholder" role="img" aria-label="ゲーム画面">hero.png</div>
+      <img class="hero-visual" src="assets/images/hero.png" width="1280" height="652" alt="箱の中に積み上がった、顔のついたカラフルなフルーツたち">
     </div>
   </header>
 
   <main>
-    <section class="section">
+    <!-- 特徴 -->
+    <section class="section" id="features">
+      <div class="container">
+        <h2>3 つの楽しさ</h2>
+        <div class="cards cards-3">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🍎</div>
+            <h3>ころがる 3D フルーツ</h3>
+            <p>フルーツは本物の球のように転がり、ぶつかり、押し合います。狙いどおりに決まることもあれば、思わぬ連鎖が起きることも。顔つきのフルーツは、合体すると大喜び、あふれそうになると焦り顔に。</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">⚔️</div>
+            <h3>最大 16 人のバトルロイヤル</h3>
+            <p>コンボを決めるとライバルの盤面に「石」が降ります。妨害を送り合い、あふれた人から脱落。最後まで残った 1 人が勝者です。</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">🎨</div>
+            <h3>集めて、飾って、見せる</h3>
+            <p>遊ぶとジェムが貯まり、フルーツの色や顔、農園の飾りと交換できます。図鑑・称号・シーズンイベントも。強くなる課金はありません。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 遊び方 -->
+    <section class="section section-alt" id="howto">
       <div class="container">
         <h2>遊び方</h2>
-        <!-- TODO: 実際のルールに合わせて文言を直す -->
         <ol class="steps">
           <li>
             <span class="step-num">1</span>
             <h3>フルーツを落とす</h3>
-            <p>落とす位置を決めて、フルーツを箱の中へ。</p>
+            <p>左右に動かして、落とす場所を決めます。着地する位置には半透明の予告が出るので、狙いを付けやすくなっています。</p>
           </li>
           <li>
             <span class="step-num">2</span>
             <h3>同じフルーツをくっつける</h3>
-            <p>同じ種類がふれ合うと、ひとまわり大きなフルーツに進化します。</p>
+            <p>同じフルーツどうしがふれ合うと合体して、ひとつ上のフルーツに進化。続けて合体させるとコンボになり、得点が伸びます。</p>
           </li>
           <li>
             <span class="step-num">3</span>
-            <h3>あふれる前に高得点を</h3>
-            <p>箱からあふれたらゲームオーバー。連続で合体させてスコアを伸ばそう。</p>
+            <h3>あふれたらゲームオーバー</h3>
+            <p>上のラインを 3 秒超え続けると負け。ラインを超えるとカウントダウンが出るので、その間に合体させて立て直そう。</p>
           </li>
         </ol>
+
+        <h3 class="sub-heading">フルーツは 11 段階</h3>
+        <p class="sub-lead">落ちてくるのは小さい 5 種類だけ。合体を重ねて、いちばん大きいスイカを目指します。</p>
+        <ol class="ladder">
+          <li style="--c:#dc323c;--s:.38"><span class="ball"></span><span class="tier">1</span>チェリー</li>
+          <li style="--c:#eb505a;--s:.44"><span class="ball"></span><span class="tier">2</span>イチゴ</li>
+          <li style="--c:#8c50be;--s:.50"><span class="ball"></span><span class="tier">3</span>ブドウ</li>
+          <li style="--c:#f5a528;--s:.56"><span class="ball"></span><span class="tier">4</span>デコポン</li>
+          <li style="--c:#e67828;--s:.62"><span class="ball"></span><span class="tier">5</span>カキ</li>
+          <li style="--c:#d22d2d;--s:.68"><span class="ball"></span><span class="tier">6</span>リンゴ</li>
+          <li style="--c:#c8d26e;--s:.74"><span class="ball"></span><span class="tier">7</span>ナシ</li>
+          <li style="--c:#fab0b9;--s:.80"><span class="ball"></span><span class="tier">8</span>モモ</li>
+          <li style="--c:#e1c33c;--s:.86"><span class="ball"></span><span class="tier">9</span>パイナップル</li>
+          <li style="--c:#96c86e;--s:.93"><span class="ball"></span><span class="tier">10</span>メロン</li>
+          <li style="--c:#3c9646;--s:1"><span class="ball"></span><span class="tier">11</span>スイカ</li>
+        </ol>
+        <p class="note-box">スイカどうしも合体できます。合体するたびにスイカの色がシルバー → ゴールド → エメラルド…と変わり、ボーナス点も大きくなっていきます。</p>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <!-- モード -->
+    <section class="section" id="modes">
+      <div class="container">
+        <h2>4 つの遊び方</h2>
+        <div class="cards cards-2">
+          <article class="card mode">
+            <p class="mode-tag tag-battle">みんなと対戦</p>
+            <h3>バトルロイヤル</h3>
+            <p>最大 16 人の対戦。人数が少ないときは 2〜3 人のデュエルになるので、待ちぼうけになりません。</p>
+          </article>
+          <article class="card mode">
+            <p class="mode-tag tag-friends">友達と</p>
+            <h3>部屋を作る / 番号で参加</h3>
+            <p>部屋を作ると 6 けたの番号が出ます。友達はその番号を入れるだけで参加できます（2〜16 人）。同じメンバーで何度でも再戦できます。</p>
+          </article>
+          <article class="card mode">
+            <p class="mode-tag tag-solo">1 人で</p>
+            <h3>エンドレス</h3>
+            <p>時間制限なし。あふれるまで積んで、ハイスコアをねらいます。途中でアプリを閉じても、次に入ったときに続きから遊べます。</p>
+          </article>
+          <article class="card mode">
+            <p class="mode-tag tag-solo">1 人で</p>
+            <h3>3 分タイムアタック</h3>
+            <p>3 分間でどこまでスコアを伸ばせるか。すき間時間にさくっと遊べて、手に入るジェムも多めです。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- バトル -->
+    <section class="section section-dark" id="battle">
+      <div class="container">
+        <h2>バトルロイヤルのルール</h2>
+        <p class="sub-lead">コンボを決めるほど、ライバルの盤面に「石」が降ります。石は合体できないお邪魔フルーツで、となりで合体が起きると消えます。</p>
+
+        <div class="table-wrap">
+          <table class="attack-table">
+            <thead>
+              <tr><th scope="col">自分がやったこと</th><th scope="col">相手に起きること</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2 コンボ</td><td>石が 1 個降る</td></tr>
+              <tr><td>3 コンボ</td><td>石が 2 個降る</td></tr>
+              <tr><td>4 コンボ以上</td><td>石が 3 個降る ＋ 次のフルーツが 1 段階大きくなる</td></tr>
+              <tr><td>スイカを作る</td><td>盤面のフルーツが一瞬ふくらむ</td></tr>
+              <tr><td>スイカどうしを合体</td><td>生き残っている全員に石が 2 個降る</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cards cards-3 battle-points">
+          <article class="card">
+            <h3>相殺で守る</h3>
+            <p>攻撃が届くまでの 2 秒間にコンボを決めれば、飛んできた石を打ち消せます。</p>
+          </article>
+          <article class="card">
+            <h3>狙う相手を選ぶ</h3>
+            <p>ふだんは自分を狙ってきた相手に反撃。リストから相手を選んで、狙い撃ちもできます。</p>
+          </article>
+          <article class="card">
+            <h3>脱落しても応援</h3>
+            <p>脱落したあとは、残っているプレイヤーの盤面を観戦。応援ボタンで推しのプレイヤーを後押しできます。</p>
+          </article>
+        </div>
+        <p class="sub-lead small">時間がたつほど降る石が増え、8 分を過ぎるとサドンデスに。1 試合はだいたい 5〜8 分です。</p>
+      </div>
+    </section>
+
+    <!-- やりこみ -->
+    <section class="section" id="collect">
+      <div class="container">
+        <h2>やりこみ要素</h2>
+        <p class="sub-lead">遊ぶとジェムが貯まります。ジェムで手に入るのは見た目のアイテムだけ。強さはお金では買えません。</p>
+        <div class="cards cards-4">
+          <article class="card small-card">
+            <h3>フルーツスキン</h3>
+            <p>11 段階のフルーツの色をまるごと着せかえ。観戦している人にも見えます。</p>
+          </article>
+          <article class="card small-card">
+            <h3>フルーツの顔</h3>
+            <p>ほそめ・まんまる・ウインク・ねこぐち…。色とは別に、好きな顔を組み合わせられます。</p>
+          </article>
+          <article class="card small-card">
+            <h3>図鑑と実績バッジ</h3>
+            <p>フルーツごとの記録を集めて、銅・銀・金のバッジを受け取ろう。</p>
+          </article>
+          <article class="card small-card">
+            <h3>称号</h3>
+            <p>手に入れた称号から 1 つを選んで名前に付けられます。</p>
+          </article>
+          <article class="card small-card">
+            <h3>デイリークエスト</h3>
+            <p>毎日 3 つの課題。全部クリアするとボーナスがもらえます。</p>
+          </article>
+          <article class="card small-card">
+            <h3>シーズンイベント</h3>
+            <p>ハロウィンやクリスマスなど、期間限定のクエストとアイテムが登場します。</p>
+          </article>
+          <article class="card small-card">
+            <h3>農園</h3>
+            <p>ロビーにある自分の区画に、集めた飾りを並べられます。</p>
+          </article>
+          <article class="card small-card">
+            <h3>週間ランキング</h3>
+            <p>エンドレスのハイスコアで、その週のトップ 10 をねらおう。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 操作 -->
+    <section class="section section-alt" id="controls">
+      <div class="container">
+        <h2>操作方法</h2>
+        <div class="table-wrap">
+          <table class="controls-table">
+            <thead>
+              <tr><th scope="col"></th><th scope="col">スマホ・タブレット</th><th scope="col">PC</th><th scope="col">ゲームパッド</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">左右に動かす</th><td>画面をドラッグ</td><td>マウス / ← → / A D</td><td>左スティック</td></tr>
+              <tr><th scope="row">落とす</th><td>指を離す</td><td>クリック / ↓ / Space</td><td>A / RT</td></tr>
+              <tr><th scope="row">狙う相手を選ぶ</th><td>対戦相手のリストをタップ</td><td>対戦相手のリストをクリック</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- スクリーンショット -->
+    <section class="section" id="screenshots">
       <div class="container">
         <h2>スクリーンショット</h2>
-        <!-- TODO: assets/images/ に画像を置いたら各 div を <img src="assets/images/ss1.png" alt="..."> に差し替える -->
         <div class="gallery">
-          <div class="placeholder" role="img" aria-label="スクリーンショット 1">ss1.png</div>
-          <div class="placeholder" role="img" aria-label="スクリーンショット 2">ss2.png</div>
-          <div class="placeholder" role="img" aria-label="スクリーンショット 3">ss3.png</div>
+          <figure>
+            <img src="assets/images/ss1.png" width="1280" height="720" loading="lazy" alt="プレイ画面。スコアと、いま落とすフルーツ・次のフルーツが表示されている">
+            <figcaption>プレイ画面。左に「いま」と「NEXT」、フルーツの段階表</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/ss2.png" width="1280" height="720" loading="lazy" alt="モード選択画面。バトルロイヤルとエンドレスを選べる">
+            <figcaption>ロビーでモードを選ぶ</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/ss3.png" width="1280" height="720" loading="lazy" alt="ロビーの農園。ハイスコアの記録やフルーツの飾りが並んでいる">
+            <figcaption>集めた飾りを並べた農園</figcaption>
+          </figure>
         </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+      <div class="container narrow">
+        <h2>よくある質問</h2>
+        <details>
+          <summary>無料で遊べますか？</summary>
+          <p>はい。Roblox のアカウントがあれば、すべてのモードを無料で遊べます。</p>
+        </details>
+        <details>
+          <summary>課金すると強くなりますか？</summary>
+          <p>いいえ。Robux で買えるのはジェムと特典だけで、ジェムと交換できるのも見た目のアイテムだけです。勝ち負けに関わるものは売っていません。</p>
+        </details>
+        <details>
+          <summary>友達とだけで遊べますか？</summary>
+          <p>ロビーで「部屋を作る」を押すと 6 けたの番号が出ます。友達は「番号で参加」から番号を入れれば同じ部屋に入れます。部屋での対戦は、報酬とランキングの対象外です。</p>
+        </details>
+        <details>
+          <summary>途中でアプリを閉じてしまったら？</summary>
+          <p>エンドレスと 3 分タイムアタックは、次に入ったときに続きから再開できます（タイムアタックの残り時間は減りません）。ただし、ラインを超えている最中に抜けた場合は負けになります。バトルロイヤルは再開できません。</p>
+        </details>
+        <details>
+          <summary>どの端末で遊べますか？</summary>
+          <p>Roblox が動くスマホ・タブレット・PC で遊べます。ゲームパッドにも対応しています。</p>
+        </details>
       </div>
     </section>
 
     <section class="section cta">
       <div class="container">
         <h2>さっそく遊んでみよう</h2>
-        <p>Roblox アカウントがあれば無料で遊べます。</p>
+        <p>気に入ったら、Roblox のお気に入りに追加しておくと新しいシーズンやアップデートを見逃しません。</p>
         <a class="btn-play" href="https://www.roblox.com/games/120549661967902" target="_blank" rel="noopener">Play on Roblox</a>
       </div>
     </section>
