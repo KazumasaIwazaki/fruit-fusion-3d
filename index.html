@@ -30,6 +30,7 @@
         <a href="#battle">バトル</a>
         <a href="#collect">やりこみ</a>
         <a href="#faq">FAQ</a>
+        <a href="#contact">お問い合わせ</a>
       </div>
       <a class="nav-play" href="https://www.roblox.com/games/120549661967902" target="_blank" rel="noopener">遊ぶ</a>
     </div>
@@ -296,6 +297,29 @@
       </div>
     </section>
 
+    <!-- お問い合わせ -->
+    <section class="section" id="contact">
+      <div class="container narrow">
+        <h2>お問い合わせ</h2>
+        <p class="sub-lead">不具合の報告やご意見・ご要望は、こちらのフォームから送ってください。</p>
+        <ul class="contact-notes">
+          <li>いただいた内容は、ゲームの改善と返信のためだけに使います。</li>
+          <li>パスワードや本名、住所などの個人情報は書かないでください。</li>
+          <li>すべてのお問い合わせに返信できるとは限りません。</li>
+        </ul>
+        <!--
+          スパム対策: フォームの URL を HTML に直接書かず、ボタンを押したときに組み立てて読み込む。
+          data-form-key には Google フォームの公開 ID（/forms/d/e/<ID>/viewform の <ID>）を
+          「逆順にした文字列」で入れる。ID の逆順は次で作れる:
+            echo -n '<ID>' | rev
+        -->
+        <div class="contact-embed" id="contact-embed" data-form-key="A1XFMQNzSoTx92OiMvb_Q7coAAjlP5l28syPp7AHUHj9JmicSLQpIAF1">
+          <button type="button" class="btn-play contact-open" id="contact-open">お問い合わせフォームを開く</button>
+          <noscript><p class="contact-fallback">フォームを表示するには JavaScript を有効にしてください。</p></noscript>
+        </div>
+      </div>
+    </section>
+
     <section class="section cta">
       <div class="container">
         <h2>さっそく遊んでみよう</h2>
@@ -311,5 +335,29 @@
       <p class="note">Roblox is a trademark of Roblox Corporation. This site is not affiliated with Roblox Corporation.</p>
     </div>
   </footer>
+
+  <script>
+    // お問い合わせフォーム: ボタンが押されたときだけ Google フォームを読み込む
+    (function () {
+      var box = document.getElementById('contact-embed');
+      var btn = document.getElementById('contact-open');
+      if (!box || !btn) return;
+      var key = box.getAttribute('data-form-key') || '';
+      if (!key) {
+        btn.disabled = true;
+        btn.textContent = 'フォームは準備中です';
+        return;
+      }
+      btn.addEventListener('click', function () {
+        var id = key.split('').reverse().join('');
+        var frame = document.createElement('iframe');
+        frame.src = ['https://docs.google.com', 'forms', 'd', 'e', id, 'viewform?embedded=true'].join('/');
+        frame.title = 'お問い合わせフォーム';
+        frame.className = 'contact-frame';
+        frame.loading = 'lazy';
+        box.replaceChildren(frame);
+      }, { once: true });
+    })();
+  </script>
 </body>
 </html>
